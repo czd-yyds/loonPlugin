@@ -1,0 +1,42 @@
+#!name = 网易云音乐快乐版
+#!desc = 解锁网易云音乐快乐歌曲、快乐皮肤、快乐等级等
+#!author = 暗夜 (yeatesss/quantumult-x)
+#!homepage = https://github.com/yeatesss/quantumult-x
+#!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url = https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy-surge.sgmodule
+#!tg-channel = 
+#!category = 音乐
+#!tag = 网易云,快乐,解锁
+#!date = 2024-10-01
+#############################################
+
+[Argument]
+# 暂无参数
+
+[Script]
+# 播放器快乐皮肤
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/playermode\/ script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 搜索结果快乐歌曲
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/search\/complex\/(page|rec\/song\/get) script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 播放器快乐歌曲1
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/v3\/song\/detail script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 播放器快乐歌曲2
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/song\/(chorus|enhance\/|play\/|type\/detail\/get) script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 播放器快乐歌曲3
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/(v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 侧边栏快乐等级
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 首页歌单快乐歌曲
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/(homepage\/|v6\/)?playlist\/ script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+# 快乐认证
+http-request ^https?:\/\/interface3?\s*\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path=https://raw.githubusercontent.com/yeatesss/quantumult-x/main/headers/wyy.js, requires-body=true, timeout=60, tag=网易云快乐
+
+[MITM]
+hostname=*.music.163.com
