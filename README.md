@@ -1,17 +1,11 @@
-# Loon Kelee Plugins for 3.2.4
+# 免责声明
 
-Source mirror: https://github.com/Moli-X/Tool/tree/X/Loon/Plugin/Kelee
-Original upstream path requested: https://kelee.one/Tool/Loon/Plugin/
+本仓库内容仅用于个人学习、技术研究与规则格式分析，不保证其合法性、准确性、完整性、有效性或可用性。
 
-All usable plugin files have `#!loon_version=3.2.4`. Existing version headers were rewritten, and missing version headers were inserted into the metadata block.
+严禁将本仓库内容用于任何商业用途、非法用途、牟利用途、公开传播、二次售卖或侵犯第三方权益的行为。
 
-Counts:
-- Source plugin entries: 171
-- Windows-visible files in `plugins/`: 170
-- Rewritten version headers: 153
-- Inserted missing version headers: 17
-- Files missing or using another `#!loon_version`: 0
+请勿长期下载、保存、分发或使用本仓库中的任何文件。若因下载、使用、修改、转载、传播本仓库内容而产生任何问题、风险、纠纷或损失，均由使用者自行承担。
 
-Note: the source contains both `BoxJs.plugin` and `Boxjs.plugin`. Windows cannot keep both in one directory because paths are case-insensitive, so the two normalized copies are preserved under `case-conflicts/BoxJs/` and `case-conflicts/Boxjs/`. The `plugins/` directory keeps one local importable BoxJs file.
+本仓库不提供任何形式的服务承诺、维护承诺、可用性承诺或技术支持。若本仓库内容侵犯了任何单位或个人的合法权益，请联系仓库所有者处理。
 
-Private GitHub access caveat: Loon cannot normally fetch a private repository with a plain `raw.githubusercontent.com` URL because it cannot send your GitHub `Authorization` header. GitHub's REST API supports authenticated content reads, but a Loon plugin URL usually needs a directly fetchable URL. For phone use, either use a public-but-unlisted repo, or use a private repo plus a small authenticated proxy that injects the GitHub token server-side.
+访问、下载、复制、引用或使用本仓库内容，即视为你已阅读、理解并同意本免责声明。
